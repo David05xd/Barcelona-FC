@@ -1,2 +1,3 @@
 from functions import *
-menu()
+if menu() == False:
+    print('')
