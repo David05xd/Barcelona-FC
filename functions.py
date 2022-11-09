@@ -9,4 +9,4 @@ def menu():
         return False
 
 def eletkor():
-    
+    pass
