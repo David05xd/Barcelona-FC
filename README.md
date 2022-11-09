@@ -1,8 +1,8 @@
 Téma: Fc Barcelona
 csapattagok: Ackermann Roland, Csizmazia Máté, Váradi Dávid
-FC Barcelona
 
-1.	Bejelentkezés: teljes név -> életkor(ha megfelel akkor folytathatja)->szerződési feltételek(ha elfogadja)
+
+1.	Bejelentkezés, regisztráció: amennyiben még nincs regisztrálva, akkor azt meg kell tenni. felhasználónév és jelszót kell kitalálni, és utána lehet hozzáférni az oldal további tartalmához
 2.	Fő menü: 3 rész: 1. klub történelem, 2. szezon béli meccsek, 3. jegyvásárlás
 3.	Klub történelem: ebben a opcióban a felhasználó elé tárul rengeteg lehetőség, amelyek közül válogathat kedvére, ez egy legördülő menűsor lesz látható
 
