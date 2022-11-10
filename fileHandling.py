@@ -1,5 +1,6 @@
 from beolvasas import*
 
+
 def loadData():
     names = []
     file = open('nevek.csv', 'r', encoding='utf-8')
