@@ -1,14 +1,14 @@
-from functions import*
-from fileHandling import*
+from functions import MainMenu
+from fileHandling import *
+
+print('Üdvözöljük az FC Barcelona hivatalos oldalán!')
 
 
-name = input('Kérjük adja meg a Teljes nevét! ')
-print(f'Tisztel {name}! Üdvözöljük a FC Barcelona hivatalos oldalán.')
-age = input('Jelenlegi életkora: ')
+MainMenu()
 
 
 
 # names = loadData()
 
-# if menu() == False:
-#     print('')
+#if Torimenu() == False:
+#    print('')
