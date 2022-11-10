@@ -6,7 +6,8 @@
 
 
 
-1	Fő menü: 3 rész: 1. klub történelem, 2. szezon béli meccsek, 3. jegyvásárlás
+## Fő menü: 3 rész: 1. klub történelem, 2. szezon béli meccsek, 3. jegyvásárlás:
+- Klub történelem: Itt le lehet kérdezni, hogy hány éve szerepelnek, illetve a legeredményesebb vagy a leggyengébb szezont. A legtöbb vagy legkevesebb gólok az adott  szezonban.
 2	Klub történelem: ebben a opcióban a felhasználó elé tárul rengeteg lehetőség, amelyek közül válogathat kedvére, ez egy legördülő menűsor lesz látható
 
 lehetőségek: hány éve szerepelnek; legeredményesebb/leggyengébb szezon; legtöbb/legkevesebb gólos szezon, eddigi TOP3 szezon;
