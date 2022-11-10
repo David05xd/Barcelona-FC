@@ -6,7 +6,7 @@
 
 
 
-## Fő menü: 3. jegyvásárlás:
+## Fő menü:
 - Klub történelem: Itt le lehet kérdezni, hogy hány éve szerepelnek, illetve a legeredményesebb vagy a leggyengébb szezont. A legtöbb vagy legkevesebb gólok az adott  szezonban.
 
 - Szezon beli meccsek: Itt láthatja a felhasználó a szezon osszes meccset napra helyszinre pontosan.
