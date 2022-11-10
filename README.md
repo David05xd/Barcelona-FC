@@ -1,5 +1,8 @@
-Téma: Fc Barcelona
-csapattagok: Ackermann Roland, Csizmazia Máté, Váradi Dávid
+# Téma: Fc Barcelona
+## Csapattagok: 
+- Ackermann Roland
+- Csizmazia Máté
+- Váradi Dávid
 
 
 
