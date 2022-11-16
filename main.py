@@ -1,14 +1,24 @@
-from functions import*
-from fileHandling import*
+from functions import MainMenu, TortenelemMenu, SzezonbeliMeccsek, Jegyvasarlas, Jegyeim
+# from fileHandling import loadData
 
 
-name = input('Kérjük adja meg a Teljes nevét! ')
-print(f'Tisztel {name}! Üdvözöljük a FC Barcelona hivatalos oldalán.')
-age = input('Jelenlegi életkora: ')
+print('Üdvözöljük az FC Barcelona hivatalos oldalán!')
 
+
+valasz = -1
+while valasz != 5:
+    valasz = int(MainMenu())
+    if valasz == 1:
+        TortenelemMenu()
+    elif valasz == 2:
+        SzezonbeliMeccsek()
+    elif valasz == 3:
+        Jegyvasarlas()
+    elif valasz == 4:
+        Jegyeim()
 
 
 # names = loadData()
 
-# if menu() == False:
-#     print('')
+#if Torimenu() == False:
+#    print('')
