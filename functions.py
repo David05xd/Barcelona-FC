@@ -1,3 +1,6 @@
+from fileHandling import loadData
+
+
 
 def TortenelemMenu():
     option = -1
@@ -59,5 +62,11 @@ def MainMenu():
         print('3 - Jegyvásárlás')
         print('4 - Jegyeim')
         print('5 - Kilépés')
+
+
         option = int(input('Válasszon a fentiek közül: '))
     return option
+
+
+def OsszesSzereples(data):
+    return(len(data))
