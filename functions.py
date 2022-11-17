@@ -71,6 +71,7 @@ def MainMenu():
 def OsszesSzereples(data):
     return(len(data))
 
+#regisztracio
 def login():    
     user = input("Felhasználónév: ")
     passw = input("Jelszó: ")
@@ -108,3 +109,4 @@ def main():
             signup()
             main()
     else: print('nincs ilyen opció')
+#regisztracio vege
