@@ -70,3 +70,41 @@ def MainMenu():
 
 def OsszesSzereples(data):
     return(len(data))
+
+def login():    
+    user = input("Felhasználónév: ")
+    passw = input("Jelszó: ")
+    f = open("login_projekt/users.txt", "r")
+    for line in f.readlines():
+        us, pw = line.strip().split("|")
+        if (user in us) and (passw in pw):
+            print ("Login successful!")
+            return True
+    print ("Hibás felhasználónév/jelszó")
+    return False
+
+def signup():
+    file = open('login_projekt/users.txt', 'a', encoding='utf-8')
+    username = input('Új felhasználónév: ')
+    password = input('Új jelszó: ')
+    term = input('szerződés(y/n): ')
+    if term == 'y':
+        print('regisztráció sikeres!')
+        file.write(f'{username}|{password}\n')
+    elif term == 'n':
+        print('Sikertelen regisztráció!')
+    else:
+        print('nincs ilyen opció!')
+
+
+def main():
+    choice = input('a) login b) sign up ')
+    if choice == 'a':
+        log = login()
+        if log == True:
+            # menü
+            pass
+    elif choice == 'b':
+            signup()
+            main()
+    else: print('nincs ilyen opció')
