@@ -110,3 +110,14 @@ def main():
             main()
     else: print('nincs ilyen opció')
 #regisztracio vege
+
+def legjobbszezonok():
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    szezon = []
+    for row in file:
+        splittedData = row.split(';')
+        if splittedData[1] == '1':
+            szezon.append(splittedData[0])
+    file.close()
+    return szezon
+    
