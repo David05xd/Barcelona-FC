@@ -11,7 +11,7 @@
 
 - Szezon beli meccsek: Itt láthatja a felhasználó a szezon osszes meccset napra helyszinre pontosan.
 
-- Jegyvásárlás: Bejelentkezés, regisztráció: amennyiben még nincs regisztrálva, akkor azt meg kell tenni. felhasználónév és jelszót kell kitalálni, és utána lehet hozzáférni a jegyvásárláshoz. A szezon hátralévő meccseinek kilistázása. Miután a felhasználó meccset választott különböző áru szektorok közül választhat. Miután megadta a szükséges székek számát a program kiírja a helyeket és a fizetendő összeget.
+- Jegyvásárlás: Bejelentkezés, regisztráció: amennyiben még nincs regisztrálva, akkor azt meg kell tenni. felhasználónév és jelszót kell kitalálni, és utána lehet hozzáférni a        jegyvásárláshoz. A szezon hátralévő meccseinek kilistázása. Miután a felhasználó meccset választott különböző áru szektorok közül választhat. Miután megadta a szükséges székek számát a program kiírja a helyeket és a fizetendő összeget.
 
  
  

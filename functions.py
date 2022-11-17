@@ -75,7 +75,7 @@ def OsszesSzereples(data):
 def login():    
     user = input("Felhasználónév: ")
     passw = input("Jelszó: ")
-    f = open("login_projekt/users.txt", "r")
+    f = open("users.txt", "r")
     for line in f.readlines():
         us, pw = line.strip().split("|")
         if (user in us) and (passw in pw):
@@ -85,7 +85,7 @@ def login():
     return False
 
 def signup():
-    file = open('login_projekt/users.txt', 'a', encoding='utf-8')
+    file = open('users.txt', 'a', encoding='utf-8')
     username = input('Új felhasználónév: ')
     password = input('Új jelszó: ')
     term = input('szerződés(y/n): ')
@@ -98,13 +98,23 @@ def signup():
         print('nincs ilyen opció!')
 
 
-def main():
+def main_login_signup():
     choice = input('a) login b) sign up ')
     if choice == 'a':
         log = login()
         if log == True:
-            # menü
-            pass
+            valasz = -1
+            while valasz != 5:
+                valasz = int(MainMenu())
+            if valasz == 1:
+                if TortenelemMenu() == 1:
+                    print(f'Eddig {OsszesSzereples()}-szer szerepeltek a bajnokságba.')
+            elif valasz == 2:
+                SzezonbeliMeccsek()
+            elif valasz == 3:
+                Jegyvasarlas()
+            elif valasz == 4:
+                Jegyeim()
     elif choice == 'b':
             signup()
             main()
