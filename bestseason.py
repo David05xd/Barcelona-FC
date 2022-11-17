@@ -5,5 +5,4 @@ def bestseason():
     for szam in data:
         if szam > maximum:
             maximum = szam 
-            print(szam, a 'nagyobb.')
-        else
+    print(maximum)
