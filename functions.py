@@ -130,4 +130,32 @@ def legjobbszezonok():
             szezon.append(splittedData[0])
     file.close()
     return szezon
-    
+
+def legrosszabbszezon():
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    szezon = []
+    for row in file:
+        splittedData = row.split(';')
+        if splittedData[1] == '9':
+            szezon.append(splittedData[0])
+    file.close()
+    return szezon
+
+def top3szezon():
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    szezon = []
+    for row in file:
+        splittedData = row.split(';')
+        if splittedData[1] == '1' or '2' or '3':
+            szezon.append(splittedData[0])
+    file.close()
+    return szezon
+
+def legtobbgol():
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    szezon = []
+    for row in file:
+        splittedData = row.split(';')
+        
+    file.close()
+    return szezon
