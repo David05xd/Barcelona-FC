@@ -127,7 +127,7 @@ def legjobbszezonok():
     for row in file:
         splittedData = row.split(';')
         if splittedData[1] == '1':
-            szezon.append(splittedData[0])
+            szezon.append(int(splittedData[0]))
     file.close()
     return szezon
 
@@ -137,7 +137,7 @@ def legrosszabbszezon():
     for row in file:
         splittedData = row.split(';')
         if splittedData[1] == '9':
-            szezon.append(splittedData[0])
+            szezon.append(int(splittedData[0]))
     file.close()
     return szezon
 
@@ -147,7 +147,7 @@ def top3szezon():
     for row in file:
         splittedData = row.split(';')
         if splittedData[1] == '1' or '2' or '3':
-            szezon.append(splittedData[0])
+            szezon.append(int(splittedData[0]))
     file.close()
     return szezon
 
