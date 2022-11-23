@@ -29,17 +29,20 @@ def SzezonbeliMeccsek():
     return option
 
 def Jegyvasarlas():
-    option = -1
-    while option < 1 or option > 6:
-        print('1 - ')
-        print('2 - ')
-        print('3 - ')
-        print('4 - ')
-        print('5 - ')
-        print('6 - ')
-        print('7 - ')
-        option = int(input('Válasszon a fentiek közül: '))
-    return option
+    option = int(input('Válassza ki a meccs időpontját (x.y.): '))
+    file = open('','r',encoding='utf-8')
+    for row in file:
+        splittedData = row.split(';')
+        if splittedData[] == option:
+            print(f'A meccs {option} -án/-én kerül megrendezésre{splittedData[]} -ban/-ben')
+            file = open('jegyek.txt', 'a', encoding='utf-8')
+            jegyekSzama = input('Hány jegyet szeretne? ')
+            file.write(f'{splittedData[]};{jegyekSzama}')
+            # ha kész az adatbázis be kell írni a számokat a splitted datákba
+        else:
+            print('Nincs ezen a napon meccs.')
+    file.close()
+    return
 
 def Jegyeim():
     option = -1
@@ -72,7 +75,7 @@ def OsszesSzereples(data):
     return(len(data))
 
 #regisztracio
-def login():    
+def login():
     user = input("Felhasználónév: ")
     passw = input("Jelszó: ")
     f = open("users.txt", "r")
@@ -100,29 +103,52 @@ def signup():
 
 def main_login_signup():
     choice = input('a) login b) sign up ')
+    logOutout = 0
     if choice == 'a':
         log = login()
         if log == True:
-            valasz = -1
-            while valasz != 5:
-                valasz = int(MainMenu())
-            if valasz == 1:
-                if TortenelemMenu() == 1:
-                    print(f'Eddig {OsszesSzereples()}-szer szerepeltek a bajnokságba.')
-            elif valasz == 2:
-                SzezonbeliMeccsek()
-            elif valasz == 3:
-                Jegyvasarlas()
-            elif valasz == 4:
-                Jegyeim()
+            pass
     elif choice == 'b':
-            signup()
-            main()
+        signup()
     else: print('nincs ilyen opció')
+#regisztracio vege
 
-def bestseason():
-    maximum = 0
-    for szam in data:
-        if szam > maximum:
-            maximum = szam 
-    print(maximum)
+def legjobbszezonok():
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    szezon = []
+    for row in file:
+        splittedData = row.split(';')
+        if splittedData[1] == '1':
+            szezon.append(int(splittedData[0]))
+    file.close()
+    return szezon
+
+def legrosszabbszezon():
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    szezon = []
+    for row in file:
+        splittedData = row.split(';')
+        if splittedData[1] == '9':
+            szezon.append(int(splittedData[0]))
+    file.close()
+    return szezon
+
+def top3szezon():
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    szezon = []
+    for row in file:
+        splittedData = row.split(';')
+        if splittedData[1] == '1' or '2' or '3':
+            szezon.append(int(splittedData[0]))
+    file.close()
+    return szezon
+
+def legtobbgol():
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    mostGol = 0
+    for row in file:
+        splittedData = row.split(';')
+        if int(splittedData[2]) > mostGol:
+            mostGol = int(splittedData[2])
+    file.close()
+    return mostGol
