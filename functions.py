@@ -118,10 +118,43 @@ def main_login_signup():
     elif choice == 'b':
         signup()
     else: print('nincs ilyen opció')
+#regisztracio vege
 
-def bestseason():
-    maximum = 0
-    for szam in data:
-        if szam > maximum:
-            maximum = szam 
-    print(maximum)
+def legjobbszezonok():
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    szezon = []
+    for row in file:
+        splittedData = row.split(';')
+        if splittedData[1] == '1':
+            szezon.append(int(splittedData[0]))
+    file.close()
+    return szezon
+
+def legrosszabbszezon():
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    szezon = []
+    for row in file:
+        splittedData = row.split(';')
+        if splittedData[1] == '9':
+            szezon.append(int(splittedData[0]))
+    file.close()
+    return szezon
+
+def top3szezon():
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    szezon = []
+    for row in file:
+        splittedData = row.split(';')
+        if splittedData[1] == '1' or '2' or '3':
+            szezon.append(int(splittedData[0]))
+    file.close()
+    return szezon
+
+def legtobbgol():
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    szezon = []
+    for row in file:
+        splittedData = row.split(';')
+        
+    file.close()
+    return szezon
