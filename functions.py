@@ -35,9 +35,10 @@ def Jegyvasarlas():
         splittedData = row.split(';')
         if splittedData[] == option:
             print(f'A meccs {option} -án/-én kerül megrendezésre{splittedData[]} -ban/-ben')
-            file = open('jegyek.txt', 'a', encoding='utf-8')
+            file = open('jegyeim.txt', 'a', encoding='utf-8')
             jegyekSzama = input('Hány jegyet szeretne? ')
-            file.write(f'{splittedData[]};{jegyekSzama}')
+            file.write(f'{splittedData[]};{splittedData[]};{jegyekSzama}')
+            # --------------hely^^^^^^^^--dátum^^^^^^^^^^
             # ha kész az adatbázis be kell írni a számokat a splitted datákba
         else:
             print('Nincs ezen a napon meccs.')
