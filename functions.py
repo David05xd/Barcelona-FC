@@ -116,8 +116,7 @@ def main_login_signup():
             elif valasz == 4:
                 Jegyeim()
     elif choice == 'b':
-            signup()
-            main()
+        signup()
     else: print('nincs ilyen opció')
 
 def bestseason():
