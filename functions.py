@@ -29,17 +29,20 @@ def SzezonbeliMeccsek():
     return option
 
 def Jegyvasarlas():
-    option = -1
-    while option < 1 or option > 6:
-        print('1 - ')
-        print('2 - ')
-        print('3 - ')
-        print('4 - ')
-        print('5 - ')
-        print('6 - ')
-        print('7 - ')
-        option = int(input('Válasszon a fentiek közül: '))
-    return option
+    option = int(input('Válassza ki a meccs időpontját (x.y.): '))
+    file = open('','r',encoding='utf-8')
+    for row in file:
+        splittedData = row.split(';')
+        if splittedData[] == option:
+            print(f'A meccs {option} -án/-én kerül megrendezésre{splittedData[]} -ban/-ben')
+            file = open('jegyek.txt', 'a', encoding='utf-8')
+            jegyekSzama = input('Hány jegyet szeretne? ')
+            file.write(f'{splittedData[]};{jegyekSzama}')
+            # ha kész az adatbázis be kell írni a számokat a splitted datákba
+        else:
+            print('Nincs ezen a napon meccs.')
+    file.close()
+    return
 
 def Jegyeim():
     option = -1
@@ -72,7 +75,7 @@ def OsszesSzereples(data):
     return(len(data))
 
 #regisztracio
-def login():    
+def login():
     user = input("Felhasználónév: ")
     passw = input("Jelszó: ")
     f = open("users.txt", "r")
