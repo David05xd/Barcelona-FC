@@ -152,9 +152,10 @@ def top3szezon():
 
 def legtobbgol():
     file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
-    szezon = []
+    mostGol = 0
     for row in file:
         splittedData = row.split(';')
-        
+        if int(splittedData[2]) > mostGol:
+            mostGol = int(splittedData[2])
     file.close()
-    return szezon
+    return mostGol

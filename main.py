@@ -17,7 +17,7 @@ while valasz != 5:
         if TortenelemMenu() == 3:
             print(f'Ezekben az években érték ek a legrosszabb helyezést: {legrosszabbszezon()}')
         if TortenelemMenu() == 4:
-            print(f'Ebben a szezonban lőtték a legtöbb gólt: {legtobbgol()}')
+            print(f'A szezonban lőtt legtöbb gól: {legtobbgol()}')
         if TortenelemMenu() == 5:
             print(f'Ezekben az években végeztek a dobogón: {top3szezon()}')
     elif valasz == 2:
