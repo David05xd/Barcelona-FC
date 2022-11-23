@@ -1,6 +1,6 @@
 from fileHandling import loadData
 
-
+fasz
 
 def TortenelemMenu():
     option = -1
