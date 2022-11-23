@@ -100,21 +100,11 @@ def signup():
 
 def main_login_signup():
     choice = input('a) login b) sign up ')
+    logOutout = 0
     if choice == 'a':
         log = login()
         if log == True:
-            valasz = -1
-            while valasz != 5:
-                valasz = int(MainMenu())
-            if valasz == 1:
-                if TortenelemMenu() == 1:
-                    print(f'Eddig {OsszesSzereples()}-szer szerepeltek a bajnokságba.')
-            elif valasz == 2:
-                SzezonbeliMeccsek()
-            elif valasz == 3:
-                Jegyvasarlas()
-            elif valasz == 4:
-                Jegyeim()
+            pass
     elif choice == 'b':
         signup()
     else: print('nincs ilyen opció')
