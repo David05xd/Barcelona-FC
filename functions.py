@@ -1,7 +1,5 @@
 from fileHandling import loadData
 
-fasz
-
 def TortenelemMenu():
     option = -1
     while option < 1 or option > 6:
@@ -33,12 +31,12 @@ def Jegyvasarlas():
     file = open('','r',encoding='utf-8')
     for row in file:
         splittedData = row.split(';')
-        if splittedData[] == option:
-            print(f'A meccs {option} -án/-én kerül megrendezésre{splittedData[]} -ban/-ben')
+        if splittedData[0] == option:
+            print(f'A meccs {option} -án/-én kerül megrendezésre{splittedData[1]} -ban/-ben')
             file = open('jegyeim.txt', 'a', encoding='utf-8')
             jegyekSzama = input('Hány jegyet szeretne? ')
-            file.write(f'{splittedData[]};{splittedData[]};{jegyekSzama}')
-            # --------------hely^^^^^^^^--dátum^^^^^^^^^^
+            file.write(f'{splittedData[0]};{splittedData[1]};{jegyekSzama}')
+            # --------------dátum^^^^^^^^--hely^^^^^^^^^^
             # ha kész az adatbázis be kell írni a számokat a splitted datákba
         else:
             print('Nincs ezen a napon meccs.')
