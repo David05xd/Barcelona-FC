@@ -23,19 +23,21 @@ def SzezonbeliMeccsek():
     return option
 
 def Jegyvasarlas():
-    option = int(input('Válassza ki a meccs időpontját (x.y.): '))
-    file = open('','r',encoding='utf-8')
+    option = input('Válassza ki a meccs időpontját (x.y.): ')
+    file = open('z:/Ferencváros_ikt/frencvaros/meccsek.csv','r',encoding='utf-8')
     for row in file:
         splittedData = row.split(';')
         if splittedData[0] == option:
-            print(f'A meccs {option} -án/-én kerül megrendezésre{splittedData[1]} -ban/-ben')
+            print(f'A meccs {option} -án/-én kerül megrendezésre {splittedData[1]} -ban/-ben')
             file = open('jegyeim.txt', 'a', encoding='utf-8')
             jegyekSzama = input('Hány jegyet szeretne? ')
-            file.write(f'{splittedData[0]};{splittedData[1]};{jegyekSzama}')
-            # --------------dátum^^^^^^^^--hely^^^^^^^^^^
-            # ha kész az adatbázis be kell írni a számokat a splitted datákba
-        else:
-            print('Nincs ezen a napon meccs.')
+            file.write(f'{splittedData[0]};{splittedData[1]};{jegyekSzama}\n')
+            return
+           
+        
+        
+        # print(f'{option} {splittedData[0]} {splittedData[1]} ')
+    print('Nincs ezen a napon meccs.')
     file.close()
     return
 

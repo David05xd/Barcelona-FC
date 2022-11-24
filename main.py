@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 from functions import MainMenu, TortenelemMenu, SzezonbeliMeccsek, Jegyvasarlas, Jegyeim, OsszesSzereples, legjobbszezonok, legrosszabbszezon, top3szezon, legtobbgol, evszamKereso
+=======
+from functions import MainMenu, TortenelemMenu, SzezonbeliMeccsek, Jegyvasarlas, Jegyeim, OsszesSzereples, legjobbszezonok, legrosszabbszezon, top3szezon, legtobbgol
+>>>>>>> 37bd0a37a6791ea6a4ded242b57323555ea449f1
 from fileHandling import loadData
 
 print('Üdvözöljük az FC Barcelona hivatalos oldalán!')
