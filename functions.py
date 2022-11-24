@@ -35,7 +35,7 @@ def Jegyvasarlas():
             print(f'A meccs {option} -án/-én kerül megrendezésre {splittedData[1]} -ban/-ben')
             file = open('jegyeim.txt', 'a', encoding='utf-8')
             jegyekSzama = input('Hány jegyet szeretne? ')
-            file.write(f'{splittedData[0]};{splittedData[1]};{jegyekSzama}\n')
+            file.write(f'{splittedData[0]};{splittedData[1]};{jegyekSzama} \n')
             return
            
         
@@ -46,17 +46,16 @@ def Jegyvasarlas():
     return
 
 def Jegyeim():
-    option = -1
-    while option < 1 or option > 6:
-        print('1 - ')
-        print('2 - ')
-        print('3 - ')
-        print('4 - ')
-        print('5 - ')
-        print('6 - ')
-        print('7 - ')
-        option = int(input('Válasszon a fentiek közül: '))
-    return option
+    file = open('jegyeim.txt','r',encoding='utf-8')
+    jegyek = []
+    for row in file:
+        splittedData = row.split(';') 
+        # strippelni kel l!!!!!!!!!!
+        jegyek.append(splittedData[0])
+        jegyek.append(splittedData[1])
+        jegyek.append(splittedData[2])
+        
+    return jegyek
 
 def MainMenu():
     option = -1

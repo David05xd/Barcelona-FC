@@ -24,4 +24,4 @@ while valasz != 5:
     elif valasz == 3:
         Jegyvasarlas()
     elif valasz == 4:
-        Jegyeim()
+        print(Jegyeim())
