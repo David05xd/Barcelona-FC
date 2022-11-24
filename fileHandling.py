@@ -1,7 +1,7 @@
 from Eredmeny import Eredmeny
 
 def loadData():
-    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    file = open('z:/Ferencváros_ikt/frencvaros/Adatbazis_Barcelona.csv','r',encoding='utf-8')
 
     results = []
 
