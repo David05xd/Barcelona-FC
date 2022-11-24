@@ -1,5 +1,4 @@
 from fileHandling import loadData
-
 def TortenelemMenu():
     option = -1
     while option < 1 or option > 6:
@@ -15,14 +14,11 @@ def TortenelemMenu():
 
 def SzezonbeliMeccsek():
     option = -1
-    while option < 1 or option > 6:
-        print('1 - ')
-        print('2 - ')
-        print('3 - ')
-        print('4 - ')
-        print('5 - ')
-        print('6 - ')
-        print('7 - ')
+    while option < 1 or option > 4:
+        print('1 - Összes meccs')
+        print('2 - Csak a hazaiak')
+        print('3 - Csak a vendégek')
+        print('4 - Kilépés')
         option = int(input('Válasszon a fentiek közül: '))
     return option
 
@@ -64,8 +60,6 @@ def MainMenu():
         print('3 - Jegyvásárlás')
         print('4 - Jegyeim')
         print('5 - Kilépés')
-
-
         option = int(input('Válasszon a fentiek közül: '))
     return option
 
@@ -151,3 +145,11 @@ def legtobbgol():
             mostGol = int(splittedData[2])
     file.close()
     return mostGol
+
+def evszamKereso(bekeres):
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    for row in file:
+        splittedData = row.split(';')
+        if int(splittedData[0]) == bekeres:
+            print(splittedData[1], splittedData[2])
+    
