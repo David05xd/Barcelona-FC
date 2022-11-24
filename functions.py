@@ -1,4 +1,5 @@
 from fileHandling import loadData
+
 def TortenelemMenu():
     option = -1
     while option < 1 or option > 6:
