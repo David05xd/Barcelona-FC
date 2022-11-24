@@ -38,9 +38,10 @@ def Jegyvasarlas():
             file.write(f'{splittedData[0]};{splittedData[1]};{jegyekSzama}\n')
             return
            
-        else:
-            print('Nincs ezen a napon meccs.')
+        
+        
         # print(f'{option} {splittedData[0]} {splittedData[1]} ')
+    print('Nincs ezen a napon meccs.')
     file.close()
     return
 
