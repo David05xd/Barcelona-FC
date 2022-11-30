@@ -1,5 +1,5 @@
-from functions import MainMenu, TortenelemMenu, SzezonbeliMeccsek, Jegyvasarlas, Jegyeim, OsszesSzereples, legjobbszezonok, legrosszabbszezon, top3szezon, legtobbgol, evszamKereso, main_login_signup
-from fileHandling import loadData
+from functions import MainMenu, TortenelemMenu, SzezonbeliMeccsek, Jegyvasarlas, Jegyeim, OsszesSzereples, legjobbszezonok, legrosszabbszezon, top3szezon, legtobbgol, evszamKereso, osszesMeccs, hazaiMeccsek, vendegMeccsek, main_login_signup
+from fileHandling import loadData, loadData2
 
 print('Üdvözöljük az FC Barcelona hivatalos oldalán!')
 
@@ -26,6 +26,13 @@ while valasz != 5:
     elif valasz == 2:
         if SzezonbeliMeccsek() == 1:
             print(f'\t A következő meccsek: ')
+        Szezonbelivalasz = SzezonbeliMeccsek()
+        if Szezonbelivalasz == 1:
+            osszesMeccs()
+        elif Szezonbelivalasz == 2:
+            hazaiMeccsek()
+        elif Szezonbelivalasz == 3:
+            vendegMeccsek()
     elif valasz == 3:
         while loggedIn == 0:
             loggedIn = main_login_signup()

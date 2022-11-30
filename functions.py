@@ -1,4 +1,6 @@
-from fileHandling import loadData
+from fileHandling import loadData, loadData2
+
+mecsek = loadData2()
 
 def TortenelemMenu():
     option = -1
@@ -34,7 +36,6 @@ def Jegyvasarlas():
             jegyekSzama = input('Hány jegyet szeretne? ')
             file.write(f'{splittedData[0]};{splittedData[1]};{jegyekSzama} \n')
             return
-           
         
         
         # print(f'{option} {splittedData[0]} {splittedData[1]} ')
@@ -152,3 +153,19 @@ def evszamKereso(bekeres):
         else: 
             print('Kérem adjon meg egy másik évszámot')
             return
+
+    
+
+def hazaiMeccsek():
+    for item in mecsek:
+        if item.hejszin == 'Barcelona':
+            print(item.datum)
+
+def vendegMeccsek():
+    for item in mecsek:
+        if item.hejszin != 'Barcelona':
+            print(item.datum, item.hejszin)
+
+def osszesMeccs():
+    for item in mecsek:
+        print(item.datum, item.hejszin)
