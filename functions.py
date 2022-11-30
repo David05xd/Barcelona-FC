@@ -24,7 +24,7 @@ def SzezonbeliMeccsek():
     return option
 
 def Jegyvasarlas():
-    option = input('Válassza ki a meccs időpontját (x.y.): ')
+    option = input('Válassza ki a meccs időpontját (x y): ')
     file = open('z:/Ferencváros_ikt/frencvaros/meccsek.csv','r',encoding='utf-8')
     for row in file:
         splittedData = row.split(';')
@@ -109,7 +109,7 @@ def main_login_signup():
 #regisztracio vege
 
 def legjobbszezonok():
-    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    file = open('z:/Ferencváros_ikt/frencvaros/Adatbazis_Barcelona.csv','r',encoding='utf-8')
     szezon = []
     for row in file:
         splittedData = row.split(';')
@@ -119,7 +119,7 @@ def legjobbszezonok():
     return szezon
 
 def legrosszabbszezon():
-    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    file = open('z:/Ferencváros_ikt/frencvaros/Adatbazis_Barcelona.csv','r',encoding='utf-8')
     szezon = []
     for row in file:
         splittedData = row.split(';')
@@ -129,7 +129,7 @@ def legrosszabbszezon():
     return szezon
 
 def top3szezon():
-    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    file = open('z:/Ferencváros_ikt/frencvaros/Adatbazis_Barcelona.csv','r',encoding='utf-8')
     szezon = []
     for row in file:
         splittedData = row.split(';')
@@ -139,7 +139,7 @@ def top3szezon():
     return szezon
 
 def legtobbgol():
-    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    file = open('z:/Ferencváros_ikt/frencvaros/Adatbazis_Barcelona.csv','r',encoding='utf-8')
     mostGol = 0
     for row in file:
         splittedData = row.split(';')
@@ -149,9 +149,12 @@ def legtobbgol():
     return mostGol
 
 def evszamKereso(bekeres):
-    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    file = open('z:/Ferencváros_ikt/frencvaros/Adatbazis_Barcelona.csv','r',encoding='utf-8')
     for row in file:
         splittedData = row.split(';')
         if int(splittedData[0]) == int(bekeres):
-            print(splittedData[1], splittedData[2])
-    
+            print(f'A {bekeres} szezonjában {splittedData[1]}.helyezést értek el, {splittedData[2]} Góllal')
+            return
+        else: 
+            print('Kérem adjon meg egy másik évszámot')
+            return

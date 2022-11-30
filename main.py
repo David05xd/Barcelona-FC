@@ -9,23 +9,26 @@ valasz = -1
 while valasz != 5:
     valasz = int(MainMenu())
     if valasz == 1:
-        if TortenelemMenu() == 1:
+        torValasz = TortenelemMenu()
+        if torValasz == 1:
             print(f'\tEddig {OsszesSzereples(osszesAdat)}-szer szerepeltek a bajnokságba.')
-        if TortenelemMenu() == 2:
+        elif torValasz == 2:
             print(f'\tEzekben az években értek el első helyezést: {legjobbszezonok()}')
-        if TortenelemMenu() == 3:
+        elif torValasz == 3:
             print(f'\tEzekben az években érték ek a legrosszabb helyezést: {legrosszabbszezon()}')
-        if TortenelemMenu() == 4:
+        elif torValasz == 4:
             print(f'\tA szezonban lőtt legtöbb gól: {legtobbgol()}')
-        if TortenelemMenu() == 5:
+        elif torValasz == 5:
             print(f'\tEzekben az években végeztek a dobogón: {top3szezon()}')
-        if TortenelemMenu() == 6:
+        elif torValasz == 6:
             bekeres = input('Kérem adja meg az évszámot: ')
             evszamKereso(bekeres)
     elif valasz == 2:
         if SzezonbeliMeccsek() == 1:
             print(f'\t A következő meccsek: {osszesMeccs()}')
     elif valasz == 3:
+        while loggedIn == 0:
+            loggedIn = main_login_signup()
         Jegyvasarlas()
     elif valasz == 4:
         print(Jegyeim())
