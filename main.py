@@ -4,7 +4,7 @@ from fileHandling import loadData, loadData2
 print('Üdvözöljük az FC Barcelona hivatalos oldalán!')
 
 osszesAdat = loadData()
-
+loggedIn = 0
 valasz = -1
 while valasz != 5:
     valasz = int(MainMenu())
