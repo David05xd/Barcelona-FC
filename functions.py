@@ -102,7 +102,7 @@ def main_login_signup():
     if choice == 'a':
         log = login()
         if log == True:
-            pass
+            return 1
     elif choice == 'b':
         signup()
     else: print('nincs ilyen opció')
@@ -152,6 +152,6 @@ def evszamKereso(bekeres):
     file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
     for row in file:
         splittedData = row.split(';')
-        if int(splittedData[0]) == bekeres:
+        if int(splittedData[0]) == int(bekeres):
             print(splittedData[1], splittedData[2])
     

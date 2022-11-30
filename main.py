@@ -1,10 +1,10 @@
-from functions import MainMenu, TortenelemMenu, SzezonbeliMeccsek, Jegyvasarlas, Jegyeim, OsszesSzereples, legjobbszezonok, legrosszabbszezon, top3szezon, legtobbgol, evszamKereso
+from functions import MainMenu, TortenelemMenu, SzezonbeliMeccsek, Jegyvasarlas, Jegyeim, OsszesSzereples, legjobbszezonok, legrosszabbszezon, top3szezon, legtobbgol, evszamKereso, main_login_signup
 from fileHandling import loadData
 
 print('Üdvözöljük az FC Barcelona hivatalos oldalán!')
 
 osszesAdat = loadData()
-
+loggedIn = 0
 valasz = -1
 while valasz != 5:
     valasz = int(MainMenu())
