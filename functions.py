@@ -44,15 +44,9 @@ def Jegyvasarlas():
 
 def Jegyeim():
     file = open('jegyeim.txt','r',encoding='utf-8')
-    jegyek = []
     for row in file:
-        splittedData = row.split(';') 
-        # strippelni kel l!!!!!!!!!!
-        jegyek.append(splittedData[0])
-        jegyek.append(splittedData[1])
-        jegyek.append(splittedData[2])
-        
-    return jegyek
+        print(f'{row}')
+    return 
 
 def MainMenu():
     option = -1
