@@ -11,7 +11,6 @@ def TortenelemMenu():
         print('4 - Legtöbb lőtt gól a szezonban')
         print('5 - Eddigi Top 3 szezonok')
         print('6 - Szezonlekérés')
-        print('7 - Vissza a főmenübe')
         option = int(input('Válasszon a fentiek közül: '))
     return option
 
@@ -150,9 +149,7 @@ def evszamKereso(bekeres):
         if int(splittedData[0]) == int(bekeres):
             print(f'A {bekeres} szezonjában {splittedData[1]}.helyezést értek el, {splittedData[2]} Góllal')
             return
-        else: 
-            print('Kérem adjon meg egy másik évszámot')
-            return
+            
 
     
 
