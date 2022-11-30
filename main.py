@@ -25,7 +25,7 @@ while valasz != 5:
             evszamKereso(bekeres)
     elif valasz == 2:
         if SzezonbeliMeccsek() == 1:
-            print(f'\t A következő meccsek: {osszesMeccs()}')
+            print(f'\t A következő meccsek: ')
     elif valasz == 3:
         while loggedIn == 0:
             loggedIn = main_login_signup()
