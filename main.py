@@ -1,5 +1,5 @@
-from functions import MainMenu, TortenelemMenu, SzezonbeliMeccsek, Jegyvasarlas, Jegyeim, OsszesSzereples, legjobbszezonok, legrosszabbszezon, top3szezon, legtobbgol, evszamKereso
-from fileHandling import loadData
+from functions import MainMenu, TortenelemMenu, SzezonbeliMeccsek, Jegyvasarlas, Jegyeim, OsszesSzereples, legjobbszezonok, legrosszabbszezon, top3szezon, legtobbgol, evszamKereso, osszesMeccs, hazaiMeccsek, vendegMeccsek
+from fileHandling import loadData, loadData2
 
 print('Üdvözöljük az FC Barcelona hivatalos oldalán!')
 
@@ -23,8 +23,13 @@ while valasz != 5:
             bekeres = input('Kérem adja meg az évszámot: ')
             evszamKereso(bekeres)
     elif valasz == 2:
-        if SzezonbeliMeccsek() == 1:
-            print(f'\t A következő meccsek: {osszesMeccs()}')
+        Szezonbelivalasz = SzezonbeliMeccsek()
+        if Szezonbelivalasz == 1:
+            osszesMeccs()
+        elif Szezonbelivalasz == 2:
+            hazaiMeccsek()
+        elif Szezonbelivalasz == 3:
+            vendegMeccsek()
     elif valasz == 3:
         Jegyvasarlas()
     elif valasz == 4:
