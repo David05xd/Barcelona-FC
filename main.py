@@ -39,4 +39,4 @@ while valasz != 5:
             loggedIn = main_login_signup()
         Jegyvasarlas()
     elif valasz == 4:
-        print(Jegyeim())
+        Jegyeim()
