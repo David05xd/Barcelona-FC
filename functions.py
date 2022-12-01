@@ -11,7 +11,6 @@ def TortenelemMenu():
         print('4 - Legtöbb lőtt gól a szezonban')
         print('5 - Eddigi Top 3 szezonok')
         print('6 - Szezonlekérés')
-        print('7 - Vissza a főmenübe')
         option = int(input('Válasszon a fentiek közül: '))
     return option
 
@@ -27,7 +26,7 @@ def SzezonbeliMeccsek():
 
 def Jegyvasarlas():
     option = input('Válassza ki a meccs időpontját (x y): ')
-    file = open('z:/Ferencváros_ikt/frencvaros/meccsek.csv','r',encoding='utf-8')
+    file = open('meccsek.csv','r',encoding='utf-8')
     for row in file:
         splittedData = row.split(';')
         if splittedData[0] == option:
@@ -104,7 +103,7 @@ def main_login_signup():
 #regisztracio vege
 
 def legjobbszezonok():
-    file = open('z:/Ferencváros_ikt/frencvaros/Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
     szezon = []
     for row in file:
         splittedData = row.split(';')
@@ -114,7 +113,7 @@ def legjobbszezonok():
     return szezon
 
 def legrosszabbszezon():
-    file = open('z:/Ferencváros_ikt/frencvaros/Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
     szezon = []
     for row in file:
         splittedData = row.split(';')
@@ -124,7 +123,7 @@ def legrosszabbszezon():
     return szezon
 
 def top3szezon():
-    file = open('z:/Ferencváros_ikt/frencvaros/Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
     szezon = []
     for row in file:
         splittedData = row.split(';')
@@ -134,7 +133,7 @@ def top3szezon():
     return szezon
 
 def legtobbgol():
-    file = open('z:/Ferencváros_ikt/frencvaros/Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
     mostGol = 0
     for row in file:
         splittedData = row.split(';')
@@ -144,15 +143,13 @@ def legtobbgol():
     return mostGol
 
 def evszamKereso(bekeres):
-    file = open('z:/Ferencváros_ikt/frencvaros/Adatbazis_Barcelona.csv','r',encoding='utf-8')
+    file = open('Adatbazis_Barcelona.csv','r',encoding='utf-8')
     for row in file:
         splittedData = row.split(';')
         if int(splittedData[0]) == int(bekeres):
             print(f'A {bekeres} szezonjában {splittedData[1]}.helyezést értek el, {splittedData[2]} Góllal')
             return
-        else: 
-            print('Kérem adjon meg egy másik évszámot')
-            return
+            
 
     
 

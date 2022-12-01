@@ -24,15 +24,16 @@ while valasz != 5:
             bekeres = input('Kérem adja meg az évszámot: ')
             evszamKereso(bekeres)
     elif valasz == 2:
-        if SzezonbeliMeccsek() == 1:
-            print(f'\t A következő meccsek: ')
         Szezonbelivalasz = SzezonbeliMeccsek()
         if Szezonbelivalasz == 1:
+            print(f'\t A következő meccsek: ')
             osszesMeccs()
         elif Szezonbelivalasz == 2:
             hazaiMeccsek()
         elif Szezonbelivalasz == 3:
             vendegMeccsek()
+        elif Szezonbelivalasz == 4:
+            pass
     elif valasz == 3:
         while loggedIn == 0:
             loggedIn = main_login_signup()
